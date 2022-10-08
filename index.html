@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,49 @@
     <title>The Tech Team</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    
-    <div class="container">
-        <p class="heading">TheTechTeam.co.in</p>
+    <nav id="nav-bar">
+        <div class="navigations active">
+            <a href="#">Home</a>
+            <div class="under-line"></div>
+        </div>
+        <div class="navigations">
+            <a href="#">Web Solutions</a>
+            <div class="under-line"></div>
+        </div>
+        <div class="navigations">
+            <a href="#">App Development</a>
+            <div class="under-line"></div>
+        </div>
+        <div class="navigations">
+            <a href="#">Design & Doc</a>
+            <div class="under-line"></div>
+        </div>
+    </nav>
+    <div class="navigations icon" id="nav-icon" onclick="Navbar()">
+        <img src="res/img/menu.svg" id="icon-image" alt="menu-bar">
     </div>
+
+    <!-- Home container -->
+    <section class="home-container">
+        <div class="logo">
+            <div class="cube-face-1"></div>
+            <div class="cube-face-2"></div>
+            <div class="cube-face-3"></div>
+            <div class="cube-face-4"></div>
+            <div class="cube-face-5"></div>
+            <div class="cube-face-6"></div>
+        </div>
+        <div class="home-info">
+            <p class="home-title">TheTechTeam.co.in</p>
+            <p class="home-description">the tech company started<br />by group of engineers</p>
+        </div>
+    </section>
+
+    <!-- ----Home End---- -->
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>

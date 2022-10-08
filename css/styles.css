@@ -2,18 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root{
+
     /* 
         Font
         Poppins - Thin - 100
         Poppins - Regular - 400
         Poppins - Medium - 500
         Poppins - Bold - 700
-
         Roboto Mono - Regular - 400
     */
+
     --ff-poppins : 'Poppins', sans-serif;
     --ff-roboto : 'Roboto Mono', monospace;
-
     /* 
         Typography
         Base Font Size : 16px
@@ -53,21 +53,199 @@
     padding: 0;
 }
 
-
 body{
     background-color: var(--clr-white-200);
 }
 
-.container{
+.home-container{
     width: 100vw;
-    height: 100vh;
+    min-height: calc(100vh - 10rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.heading {
-    font-size: var(--step-4);
-    font-weight: 600;
+/* --------Nav Bar-------- */
+#nav-bar{
+    position: sticky;
+    height: 10rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    border-bottom:0.1rem solid var(--clr-grey-400) ;
 }
+
+.navigations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navigations a{
+    display: block;
+    font-size: var(--step--0);
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 0.5rem;
+    border-radius: 1rem;
+}
+
+.navigations a:hover{
+    color: var(--clr-red-200);
+}
+
+.icon{
+    display: none;
+}
+
+ .active .under-line{
+    height: 0.2rem;
+    min-width: 2rem;
+    background-color: var(--clr-red-200);
+}
+
+
+
+/* ------Home------- */
+.logo{
+    width: 11rem;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: [col-start] 1fr [col-1] 1fr [col-2] 1fr [col-end];
+    grid-auto-rows: 1fr 1fr 1fr;
+    gap: 0.2rem;
+    align-items: stretch;
+    grid-template-areas:
+        "c1 c1 c2"
+        "c1 c1 c3"
+        "c4 c5 c6";
+}
+
+.cube-face-1{
+    grid-area: c1;
+    background-color: var(--clr-red-200);
+    border-radius: 0.6rem;
+}
+
+.cube-face-2 {
+    grid-area: c2;
+}
+
+.cube-face-3{
+    grid-area: c3;
+    background-color: var(--clr-blue-800);
+    border-radius: 0.6rem;
+}
+
+.cube-face-4{
+    grid-area: c4;
+}
+
+.cube-face-5{
+    grid-area: c5;
+    background-color: var(--clr-orange-200);
+    border-radius: 0.6rem;
+}
+
+.cube-face-6{
+    grid-area: c6;
+}
+.home-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title{
+    font-size: var(--step-3);
+    font-weight: 700;
+    margin-top: 4rem;
+    font-family: var(--ff-poppins);
+}
+
+.home-description{
+    font-size: var(--step-1);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ----Home End ---- */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+
+    .home-container{
+        min-height: 100vh;
+    }
+    /* ------Nav Bar-------- */
+    #nav-bar{
+        display:none
+    }
+    
+    .icon {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: block;
+        right:0;
+        top:0;
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .icon img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #nav-bar.responsive {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        z-index: 900;
+        background-color: var(--clr-white-200);
+        position: absolute;
+    }
+
+    /* --------Nav-Bar End----------- */
+
+    /* --------Home--------- */
+    
+   
+    .logo{
+        width: clamp(8.00rem, calc(5.86rem + 10.71vw), 11.00rem);
+        height:  clamp(7.00rem, calc(4.86rem + 10.71vw), 10.00rem);
+        position: static;
+    }
+    /* ---------Home End ---------- */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+
+ }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) { 
+
+ }
