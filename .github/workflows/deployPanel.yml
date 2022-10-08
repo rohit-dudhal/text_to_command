@@ -15,9 +15,6 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          exclude : |
-            only-for-documentation.txt
-          dangerous-clean-state: true
           state-name : ./sync-state.json
           log-level : verbose
           server: ${{ secrets.FTP_SERVER }}
