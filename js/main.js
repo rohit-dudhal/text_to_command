@@ -10,21 +10,20 @@ toggleButton.addEventListener("click", () => {
 
 // On Nav link click, hide the navigation bar
 navLinks.forEach((selectedNavLink) => {
-
   selectedNavLink.addEventListener("click", () => {
     // unselect all the nav
-    const previousSelectedNavLinks = [...document.getElementsByClassName("active")]
+    const previousSelectedNavLinks = [
+      ...document.getElementsByClassName("active"),
+    ];
     previousSelectedNavLinks.forEach((navLink) => {
-      navLink.classList.remove("active")
-    })
+      navLink.classList.remove("active");
+    });
 
     // Select the current clicked nav link
-    selectedNavLink.classList.add("active")
+    selectedNavLink.classList.add("active");
 
     // Toggle the Nav Button and close the navigation bar
     toggleButton.classList.toggle("close");
     navBarLinks.classList.toggle("show");
-
   });
-  
 });
