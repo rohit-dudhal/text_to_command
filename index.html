@@ -18,45 +18,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Tech Team</title>
     <link rel="stylesheet" href="./css/styles.css">
-
     <!-- Site Metadata -->
-    <meta property="og:title" content="The Tech Team"/>
-    <meta property="og:url" content="https://www.thetechteam.co.in/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.thetechteam.co.in/"/>
-    <meta property="og:image" content="https://www.thetechteam.co.in/res/logo.png"/>
+    <meta property="og:title" content="The Tech Team" />
+    <meta property="og:url" content="https://www.thetechteam.co.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.thetechteam.co.in/" />
+    <meta property="og:image" content="https://www.thetechteam.co.in/res/logo.png" />
     <meta property="og:image:width" content="300">
     <meta property="og:image:height" content="300">
-    <meta property="og:description" content="the tech company started by group of engineers"/>
-
-
+    <meta property="og:description" content="the tech company started by group of engineers" />
 </head>
 
 <body>
-    <nav id="nav-bar">
-        <div class="navigations active">
-            <a href="#">Home</a>
-            <div class="under-line"></div>
-        </div>
-        <div class="navigations">
-            <a href="#">Web Solutions</a>
-            <div class="under-line"></div>
-        </div>
-        <div class="navigations">
-            <a href="#">App Development</a>
-            <div class="under-line"></div>
-        </div>
-        <div class="navigations">
-            <a href="#">Design & Doc</a>
-            <div class="under-line"></div>
-        </div>
-    </nav>
-    <div class="navigations icon" id="nav-icon" onclick="Navbar()">
-        <img src="res/img/menu.svg" id="icon-image" alt="menu-bar">
-    </div>
 
-    <!-- Home container -->
-    <section class="home-container">
+    <!-- Nav Bar Start -->
+    <nav id="nav-bar">
+        <div class="nav-bar-toggle"></div>
+        <ul class="nav-bar-links">
+            <li class="nav-link active"><a href="#home">Home</a></li>
+            <li class="nav-link"><a href="#web-solutions">Web Solutions</a></li>
+            <li class="nav-link"><a href="#app-development">App Development</a></li>
+            <li class="nav-link"><a href="#design-doc">Design & Doc</a></li>
+        </ul>
+    </nav>
+    <!-- Nav Bar End -->
+
+    <!-- HOME START -->
+    <section class="home-container" id="home">
         <div class="logo">
             <div class="cube-face-1"></div>
             <div class="cube-face-2"></div>
@@ -70,11 +58,10 @@
             <p class="home-description">the tech company started<br />by group of engineers</p>
         </div>
     </section>
+    <!-- HOME END -->
 
-    <!-- ----Home End---- -->
-
-    <!-- Web Solutions Start -->
-    <section class="web-container">
+    <!-- WEB SOLUTIONS START -->
+    <section class="section web-container" id="web-solutions">
         <div class="service-header">
             <h1 class="title">Web Solutions</h1>
             <p class="description">professional and creative websites for your business</p>
@@ -86,7 +73,7 @@
             </div>
             <div class="services">
                 <div class="service-card-1 card">
-                    <div class = "service-card-image">
+                    <div class="service-card-image">
                         <img src="./res/img/web-solutions-seo.jpg" alt="SEO">
                     </div>
                     <div class="service-card-info">
@@ -94,28 +81,28 @@
                     </div>
                 </div>
                 <div class="service-card-2 card">
-                    <div class = "service-card-image">
-                    <img src="./res/img/web-solution-domain.jpg" alt="DOMAIN">
+                    <div class="service-card-image">
+                        <img src="./res/img/web-solution-domain.jpg" alt="DOMAIN">
                     </div>
                     <div class="service-card-info">
-                    <p>Domain and <br> Hosting Management</p>
+                        <p>Domain and <br> Hosting Management</p>
                     </div>
                 </div>
                 <div class="service-card-3 card">
-                    <div class = "service-card-image">
-                    <img src="./res/img/web-solutions-responsive.jpg" alt="">
+                    <div class="service-card-image">
+                        <img src="./res/img/web-solutions-responsive.jpg" alt="">
                     </div>
                     <div class="service-card-info">
-                    <p>Responsive, Fast and <br> Secure websites</p>
+                        <p>Responsive, Fast and <br> Secure websites</p>
                     </div>
                 </div>
-        
+
                 <div class="service-card-4 card">
-                    <div class = "service-card-image">
-                    <img src="./res/img/web-solutions-wordpress.jpg" alt="WORDPRESS">
+                    <div class="service-card-image">
+                        <img src="./res/img/web-solutions-wordpress.jpg" alt="WORDPRESS">
                     </div>
                     <div class="service-card-info">
-                    <p>Wordpress <br> and WIX</p>
+                        <p>Wordpress <br> and WIX</p>
                     </div>
                 </div>
             </div>
@@ -125,10 +112,10 @@
             </div>
         </div>
     </section>
-    <!-- Web Solution Ends -->
+    <!-- WEB SOLUTIONS END -->
 
-    <!-- App Development Start -->
-    <section class="app-container">
+    <!-- APP DEVELOPMENT START -->
+    <section class="section app-container" id="app-development">
         <div class="service-header">
             <h1 class="title">App Development</h1>
             <p class="description">creating Quality and Performant Apps for your business</p>
@@ -145,7 +132,8 @@
                     </div>
                     <div class="app-service-info">
                         <h3>Wireframes & Design Systems</h3>
-                        <p>creating wireframes and design systems for your applications, by following material design guidelines.</p>
+                        <p>creating wireframes and design systems for your applications, by following material design
+                            guidelines.</p>
                     </div>
                 </div>
                 <div class="app-service-card">
@@ -164,10 +152,10 @@
             </div>
         </div>
     </section>
-    <!-- App Development Ends -->  
+    <!-- APP DEVELOPMENT END -->
 
-    <!-- Design and Document Start -->
-    <section class="design-container">
+    <!-- DESIGN & DOCUMENT START -->
+    <section class="section design-container" id="design-doc">
         <div class="service-header">
             <h1 class="title">Design & Documentation</h1>
             <p class="description">Design and Document your business ideas in professional way</p>
@@ -184,7 +172,8 @@
                     </div>
                     <div class="design-service-card-info">
                         <p>Low & High Fidelity Wireframes, Design Systems and Documentation</p>
-                        <h4>we can help your random ideas, to get organize and create a professional documentation for your product. we hold good experience in creating wireframes and documenting things</h4>
+                        <h4>we can help your random ideas, to get organize and create a professional documentation for
+                            your product. we hold good experience in creating wireframes and documenting things</h4>
                     </div>
                 </div>
             </div>
@@ -193,8 +182,9 @@
                 <div class="chips clr-yellow-200">MVP’s</div>
             </div>
         </div>
-    </section>    
-    <!-- Design and Document end -->
+    </section>
+    <!-- DESIGN & DOCUMENT END -->
+
 
     <script src="./js/main.js"></script>
 </body>

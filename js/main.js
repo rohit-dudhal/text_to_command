@@ -1,24 +1,30 @@
-function Navbar() {
-  var navBarElement = document.getElementById("nav-bar");
-  var navIconElement = document.getElementById("nav-icon");
-  if (navBarElement.className === "nav-bar") {
-    navBarElement.className += " responsive";
-    navIconElement.className += " resp";
-    document.getElementById("icon-image").src = "./res/img/x.svg";
-  } else {
-    navBarElement.className = "nav-bar";
-    navIconElement.className = "navigations icon";
-    document.getElementById("icon-image").src = "./res/img/menu.svg";
-  }
-}
+const toggleButton = document.getElementsByClassName("nav-bar-toggle")[0];
+const navBarLinks = document.getElementsByClassName("nav-bar-links")[0];
+const navLinks = [...document.getElementsByClassName("nav-link")];
 
-var header = document.getElementById("nav-bar");
-var nav = header.getElementsByClassName("navigations");
-for (var i = 0; i < nav.length; i++) {
-  nav[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName("active");
-    console.log(current);
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+// Toggle Nav Bar
+toggleButton.addEventListener("click", () => {
+  navBarLinks.classList.toggle("show");
+  toggleButton.classList.toggle("close");
+});
+
+// On Nav link click, hide the navigation bar
+navLinks.forEach((selectedNavLink) => {
+
+  selectedNavLink.addEventListener("click", () => {
+    // unselect all the nav
+    const previousSelectedNavLinks = [...document.getElementsByClassName("active")]
+    previousSelectedNavLinks.forEach((navLink) => {
+      navLink.classList.remove("active")
+    })
+
+    // Select the current clicked nav link
+    selectedNavLink.classList.add("active")
+
+    // Toggle the Nav Button and close the navigation bar
+    toggleButton.classList.toggle("close");
+    navBarLinks.classList.toggle("show");
+
   });
-}
+  
+});
