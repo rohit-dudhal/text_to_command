@@ -423,43 +423,43 @@ body {
 
 /* Design and document start */
 
-.design-container{
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.design-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.design-services{
-    display: flex;
-    flex-direction: column;
-    flex: 2;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
+.design-services {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.design-card{
-    width: 100%;
-    height: 32rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    box-shadow: black .4rem .4rem;
+.design-card {
+  width: 100%;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: black 0.4rem 0.4rem;
 }
 
-.design-service-card-image{
-    flex: 1;
-    overflow: hidden;
-    width: 100%;
+.design-service-card-image {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
 }
 
-.design-service-card-info{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0.5rem;
-    /* flex: var(--step-2); */
+.design-service-card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0.5rem;
+  text-align: center;
 }
 
 .design-service-card-image > img {
@@ -468,25 +468,24 @@ body {
   object-fit: cover;
 }
 
-.design-service-card-info>p{
-    font-size: var(--step-0);
-    font-weight: 400;
-    font-family: var(--ff-poppins);
+.design-service-card-info > p {
+  font-size: var(--step-0);
+  font-weight: 400;
+  font-family: var(--ff-poppins);
 }
 
-.design-service-card-info>h4{
-    font-size: var(--step--2);
-    font-weight: 400;
-    font-family: var(--ff-poppins);
-    margin-top: 1rem;
-    line-height: 2rem;
+.design-service-card-info > h4 {
+  font-size: var(--step--2);
+  font-weight: 400;
+  font-family: var(--ff-poppins);
+  margin-top: 1rem;
+  line-height: 2rem;
 }
 
 /* Design and document end */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-    
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -516,7 +515,6 @@ body {
       "s4";
     flex: 1;
   }
-
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -527,9 +525,9 @@ body {
   .app-services {
     padding: 0rem 2rem;
   }
-  
-    /* Design and document */
-  .design-services{
+
+  /* Design and document */
+  .design-services {
     padding: 0rem 2rem;
   }
 }
