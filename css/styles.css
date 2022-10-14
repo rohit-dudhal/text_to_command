@@ -16,21 +16,22 @@
   /* 
         Typography
         Base Font Size : 16px
-        Type Scale : 1.2
+        Type Scale : 1.125
         Generated using UTOPIA 
-        https://utopia.fyi/type/calculator/?c=320,16,1.2,1200,24,1.25,6,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+        https://utopia.fyi/type/calculator?c=320,16,1.125,1200,24,1.25,6,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+
     */
-  --step--4: clamp(0.48rem, calc(0.43rem + 0.24vw), 0.61rem);
-  --step--3: clamp(0.58rem, calc(0.51rem + 0.34vw), 0.77rem);
-  --step--2: clamp(0.69rem, calc(0.6rem + 0.48vw), 0.96rem);
-  --step--1: clamp(0.83rem, calc(0.7rem + 0.67vw), 1.2rem);
+  --step--4: clamp(0.61rem, calc(0.63rem + -0.02vw), 0.62rem);
+  --step--3: clamp(0.7rem, calc(0.68rem + 0.12vw), 0.77rem);
+  --step--2: clamp(0.79rem, calc(0.73rem + 0.31vw), 0.96rem);
+  --step--1: clamp(0.89rem, calc(0.78rem + 0.57vw), 1.2rem);
   --step-0: clamp(1rem, calc(0.82rem + 0.91vw), 1.5rem);
-  --step-1: clamp(1.2rem, calc(0.95rem + 1.23vw), 1.88rem);
-  --step-2: clamp(1.44rem, calc(1.11rem + 1.64vw), 2.34rem);
-  --step-3: clamp(1.73rem, calc(1.29rem + 2.19vw), 2.93rem);
-  --step-4: clamp(2.07rem, calc(1.5rem + 2.89vw), 3.66rem);
-  --step-5: clamp(2.49rem, calc(1.73rem + 3.8vw), 4.58rem);
-  --step-6: clamp(2.99rem, calc(1.99rem + 4.97vw), 5.72rem);
+  --step-1: clamp(1.13rem, calc(0.85rem + 1.36vw), 1.88rem);
+  --step-2: clamp(1.27rem, calc(0.87rem + 1.96vw), 2.34rem);
+  --step-3: clamp(1.42rem, calc(0.88rem + 2.74vw), 2.93rem);
+  --step-4: clamp(1.6rem, calc(0.85rem + 3.75vw), 3.66rem);
+  --step-5: clamp(1.8rem, calc(0.79rem + 5.05vw), 4.58rem);
+  --step-6: clamp(2.03rem, calc(0.68rem + 6.72vw), 5.72rem);
 
   /* Colors */
   --clr-red-200: #e65349;
@@ -157,21 +158,36 @@ body {
   background-image: url(../res/img/ic_close.svg);
 }
 
-.section {
-  padding: 10rem 0rem;
+section {
+  padding: 1.6rem 0;
 }
 
-/* ------Home------- */
-
-.home-container {
-  width: 100vw;
-  min-height: calc(100vh - 10rem);
+/* Section : Home */
+#home {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
+  width: 100vw;
+  height: calc(100vh - 10rem);
 }
 
+.home-info {
+  margin-top: 2rem;
+}
+
+.home-title {
+  font-size: var(--step-3);
+  font-family: var(--ff-poppins);
+  font-weight: 700;
+}
+
+.home-description {
+  font-size: var(--step-0);
+}
+
+/* Logo */
 .logo {
   width: 11rem;
   height: 10rem;
@@ -185,58 +201,30 @@ body {
     "c1 c1 c3"
     "c4 c5 c6";
 }
-
 .cube-face-1 {
   grid-area: c1;
   background-color: var(--clr-red-200);
   border-radius: 0.6rem;
 }
-
 .cube-face-2 {
   grid-area: c2;
 }
-
 .cube-face-3 {
   grid-area: c3;
   background-color: var(--clr-blue-800);
   border-radius: 0.6rem;
 }
-
 .cube-face-4 {
   grid-area: c4;
 }
-
 .cube-face-5 {
   grid-area: c5;
   background-color: var(--clr-orange-200);
   border-radius: 0.6rem;
 }
-
 .cube-face-6 {
   grid-area: c6;
 }
-.home-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-title {
-  font-size: var(--step-3);
-  font-weight: 700;
-  margin-top: 4rem;
-  font-family: var(--ff-poppins);
-}
-
-.home-description {
-  font-size: var(--step-1);
-  font-weight: 400;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-/* ----Home End ---- */
 
 /* Web Solution  */
 
@@ -349,12 +337,13 @@ body {
 }
 
 .chips {
-  padding: 0.8rem 1.6rem;
+  padding: 0.6rem 1.6rem;
   box-shadow: black 0.4rem 0.4rem;
-  font-size: var(--step--1);
+  font-size: var(--step--0);
   font-family: var(--ff-roboto);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 /* Web Solutions Ends */
@@ -379,7 +368,7 @@ body {
 }
 
 .app-service-card {
-  width: 100%;
+  width: 80%;
   height: 16rem;
   display: flex;
   flex-direction: row;
@@ -440,9 +429,10 @@ body {
 }
 
 .design-card {
-  width: 100%;
-  height: 32rem;
+  width: 80%;
+  height: 30rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: white;
@@ -450,57 +440,73 @@ body {
 }
 
 .design-service-card-image {
-  flex: 1;
-  overflow: hidden;
+  background-image: url(../res/img/design-doc.jpg);
+  background-size: cover;
   width: 100%;
+  height: 40%;
 }
-
 .design-service-card-info {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0.5rem;
   text-align: center;
+  padding: 0.6rem;
+  height: 60%;
+  gap: 0.6rem;
 }
 
-.design-service-card-image > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.design-service-card-info > p {
+.design-service-card-info > h5 {
+  font-weight: 400;
+  font-family: var(--ff-poppins);
   font-size: var(--step-0);
-  font-weight: 400;
-  font-family: var(--ff-poppins);
-}
-
-.design-service-card-info > h4 {
-  font-size: var(--step--2);
-  font-weight: 400;
-  font-family: var(--ff-poppins);
-  margin-top: 1rem;
   line-height: 2rem;
+  margin-top: 0.6rem;
+}
+.design-service-card-info > p {
+  font-family: var(--ff-poppins);
+  font-size: var(--step--2);
+  text-align: center;
+  line-height: 1.8rem;
+  margin-top: 0.6rem;
 }
 
 /* Design and document end */
 
-/* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-  .home-container {
-    min-height: 100vh;
+  #nav-bar {
+    height: 100vh;
+    position: absolute;
+    border-bottom: none;
+    background-color: transparent;
   }
 
-  /* --------Home--------- */
+  .nav-bar-toggle {
+    display: block;
+  }
+
+  .nav-bar-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-bar-links.show {
+    display: flex;
+    background-color: var(--clr-white-200);
+  }
+
+  #home {
+    height: 100vh;
+  }
+
   .logo {
     width: clamp(8rem, calc(5.86rem + 10.71vw), 11rem);
     height: clamp(7rem, calc(4.86rem + 10.71vw), 10rem);
     position: static;
   }
-  /* ---------Home End ---------- */
 
   .services {
     display: grid;
@@ -515,20 +521,15 @@ body {
       "s4";
     flex: 1;
   }
+  .design-card {
+    height: 36rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
   .service-body {
     flex-direction: column;
-  }
-  .app-services {
-    padding: 0rem 2rem;
-  }
-
-  /* Design and document */
-  .design-services {
-    padding: 0rem 2rem;
   }
 }
 
@@ -542,7 +543,7 @@ body {
 
   .app-service-thumb {
     flex: unset;
-    height: 50%;
+    height: 40%;
   }
 
   .app-service-info {
@@ -559,41 +560,6 @@ body {
   .app-service-info > p {
     margin-top: 0.6rem;
   }
-
-  .design-card {
-    width: 16rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-  #nav-bar {
-    height: 100vh;
-    position: absolute;
-    border-bottom: none;
-    background-color: transparent;
-  }
-  .nav-bar-toggle {
-    display: block;
-  }
-  .nav-bar-links {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .nav-bar-links.show {
-    display: flex;
-    background-color: var(--clr-white-200);
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
