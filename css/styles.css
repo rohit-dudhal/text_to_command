@@ -42,6 +42,7 @@
   --clr-blue-800: #15304e;
   --clr-white-200: #f1f1f1;
   --clr-grey-400: #a7a5a4;
+  --clr-red-600:#b33723;
 }
 
 /**
@@ -72,6 +73,11 @@
 
 .clr-yellow-200 {
   background-color: var(--clr-yellow-200);
+}
+
+.clr-red-600 {
+    background-color: var(--clr-red-600);
+    color: white;
 }
 
 .align-left {
@@ -470,6 +476,76 @@ section {
 }
 
 /* Design and document end */
+
+/*Footer Start*/
+
+footer {
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.footer-title {
+    font-size: var(--step-3);
+    font-weight: 700;
+    text-align: center;
+    margin-top: 6rem;
+    /* line-height: 5rem; */
+}
+
+.footer-chips{
+    padding: 0.6rem 1.6rem;
+    box-shadow: black 0.4rem 0.4rem;
+    font-size: var(--step-0);
+    font-family: var(--ff-roboto);
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-top: 2.5rem;
+}
+
+.footer-chips > a {
+    text-decoration: none;
+    font-size: var(--step-0);
+    font-family: var(--ff-roboto);
+    text-transform: capitalize;
+    color: white;
+}
+
+.footer-name-block{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--clr-grey-400);
+}
+
+.footer-name-block > p, footer > p{
+    font-weight: 400;
+    font-size: var(--step-0);
+    text-align: center;
+}
+
+footer>p {
+    padding: 0 2rem;
+}
+
+.footer-logo{
+    height: 3.3rem ;
+}
+
+.footer-logo > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*Footer End*/
 
 @media (max-width: 576px) {
 }
