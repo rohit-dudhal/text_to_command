@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 2
       - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
           log-level : verbose
           server: ${{ secrets.FTP_SERVER }}
