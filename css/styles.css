@@ -375,7 +375,7 @@ section {
 }
 
 .app-service-card {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -618,6 +618,7 @@ footer>p {
 @media (max-width: 1400px) {
   .app-service-card {
     flex-direction: column;
+    width: 80%;
   }
 
   .app-service-thumb {
