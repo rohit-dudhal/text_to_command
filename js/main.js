@@ -1,6 +1,7 @@
 const toggleButton = document.getElementsByClassName("nav-bar-toggle")[0];
 const navBarLinks = document.getElementsByClassName("nav-bar-links")[0];
 const navLinks = [...document.getElementsByClassName("nav-link")];
+const navBar = document.getElementById('nav-bar')
 
 // Toggle Nav Bar
 toggleButton.addEventListener("click", () => {
@@ -27,3 +28,19 @@ navLinks.forEach((selectedNavLink) => {
     navBarLinks.classList.toggle("show");
   });
 });
+
+//Navigation bar scorll effect
+var prevScrollpos = window.pageYOffset;
+const navBarHeight = navBar.style.height;
+console.log(navBarHeight);
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+console.log(currentScrollPos)
+  if (prevScrollpos > currentScrollPos) {
+    navBar.style.top = "0";
+  } else {
+    navBar.style.top = "-8rem";
+  }
+  prevScrollpos = currentScrollPos;
+}
+

@@ -166,7 +166,9 @@ body {
   height: 8rem;
   border-bottom: 1px solid var(--clr-grey-400);
   top: 0;
+  transition: top 0.4s;
   background-color: var(--clr-white-200);
+  z-index: 999;
 }
 
 .nav-bar-links {
