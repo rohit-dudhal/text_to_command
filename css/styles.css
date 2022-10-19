@@ -159,6 +159,21 @@ body {
   overflow: scroll;
 }
 
+/* Fade Logic Css Start */
+
+.reveal{
+  position: relative;
+  transform: translateY(9.3rem);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Fade Logic Css End */
+
 /* Nav Bar */
 #nav-bar {
   position: sticky;
