@@ -13,6 +13,9 @@
   --ff-poppins: "Poppins", sans-serif;
   --ff-roboto: "Roboto Mono", monospace;
 
+  /*Z-index variable */
+  --z-index-100 :100;
+
   /* 
         Typography
         Base Font Size : 16px
@@ -159,6 +162,21 @@ body {
   overflow: scroll;
 }
 
+/* Fade Logic Css Start */
+
+.reveal{
+  position: relative;
+  transform: translateY(9.3rem);
+  opacity: 0;
+  transition: all 0.9s ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Fade Logic Css End */
+
 /* Nav Bar */
 #nav-bar {
   position: sticky;
@@ -166,7 +184,9 @@ body {
   height: 8rem;
   border-bottom: 1px solid var(--clr-grey-400);
   top: 0;
+  transition: top 0.4s;
   background-color: var(--clr-white-200);
+  z-index: var(--z-index-100);
 }
 
 .nav-bar-links {
