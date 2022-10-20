@@ -31,12 +31,16 @@ navLinks.forEach((selectedNavLink) => {
 
 //Navigation bar scorll effect
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    navBar.style.top = "0";
-  } else {
-    navBar.style.top = "-8rem";
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  var screenWidth = screen.width;
+  console.log(screenWidth);
+  if (screenWidth > 768) {
+    if (prevScrollpos > currentScrollPos) {
+      navBar.style.top = "0";
+    } else {
+      navBar.style.top = "-8rem";
+    }
   }
   prevScrollpos = currentScrollPos;
 }
