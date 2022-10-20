@@ -31,11 +31,8 @@ navLinks.forEach((selectedNavLink) => {
 
 //Navigation bar scorll effect
 var prevScrollpos = window.pageYOffset;
-const navBarHeight = navBar.style.height;
-console.log(navBarHeight);
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
-console.log(currentScrollPos)
   if (prevScrollpos > currentScrollPos) {
     navBar.style.top = "0";
   } else {

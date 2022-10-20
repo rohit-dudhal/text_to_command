@@ -13,6 +13,9 @@
   --ff-poppins: "Poppins", sans-serif;
   --ff-roboto: "Roboto Mono", monospace;
 
+  /*Z-index variable */
+  --z-index-100 :100;
+
   /* 
         Typography
         Base Font Size : 16px
@@ -183,7 +186,7 @@ body {
   top: 0;
   transition: top 0.4s;
   background-color: var(--clr-white-200);
-  z-index: 999;
+  z-index: var(--z-index-100);
 }
 
 .nav-bar-links {
