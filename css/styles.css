@@ -104,10 +104,18 @@
 .web-app-service-card {
   width: 100%;
   height: auto;
+  min-height: 16rem;
   display: flex;
   flex-direction: row;
   background-color: white;
   box-shadow: black 0.4rem 0.4rem;
+  overflow: hidden;
+  transition: box-shadow,border-radius .2s;
+}
+
+.web-app-service-card:hover{
+  box-shadow: black 1rem 1rem;
+  border-radius: 2rem;
 }
 
 .web-app-service-thumb {
@@ -168,7 +176,7 @@ body {
   position: relative;
   transform: translateY(9.3rem);
   opacity: 0;
-  transition: all 0.9s ease;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 }
 .reveal.active{
   transform: translateY(0);
@@ -284,11 +292,14 @@ section {
     "c1 c1 c2"
     "c1 c1 c3"
     "c4 c5 c6";
+  animation: logo-gap-anim 1s ease-in infinite alternate;
 }
 .cube-face-1 {
   grid-area: c1;
   background-color: var(--clr-red-200);
   border-radius: 0.6rem;
+  animation: logo-scale-up-anim 1s ease-in infinite alternate;
+  animation-iteration-count: in;
 }
 .cube-face-2 {
   grid-area: c2;
@@ -297,6 +308,7 @@ section {
   grid-area: c3;
   background-color: var(--clr-blue-800);
   border-radius: 0.6rem;
+  animation: logo-scale-up-anim 1s ease-in infinite alternate;
 }
 .cube-face-4 {
   grid-area: c4;
@@ -305,9 +317,28 @@ section {
   grid-area: c5;
   background-color: var(--clr-orange-200);
   border-radius: 0.6rem;
+  animation: logo-scale-up-anim 1s ease-in infinite alternate;
 }
 .cube-face-6 {
   grid-area: c6;
+}
+
+@keyframes logo-scale-up-anim {
+  0% {
+    scale: 0.9;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+@keyframes logo-gap-anim {
+  0% {
+    gap: 0.1rem;
+  }
+  100% {
+    gap: 0.2rem;
+  }
 }
 
 /* Web Solution  */
@@ -408,6 +439,13 @@ section {
   align-items: center;
   background-color: white;
   box-shadow: black 0.4rem 0.4rem;
+  transition: all .2s;
+  overflow: hidden;
+}
+
+.design-card:hover{
+  box-shadow: black 1rem 1rem;
+  border-radius: 2rem;
 }
 
 .design-service-card-image {
