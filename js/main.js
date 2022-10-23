@@ -55,9 +55,9 @@ function reveal() {
     var elementVisible = 150;
 
     if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
+      reveals[i].classList.add("fadein");
     } else {
-      reveals[i].classList.remove("active");
+      reveals[i].classList.remove("fadein");
     }
   }
 }
