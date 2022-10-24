@@ -564,6 +564,7 @@ footer>p {
     position: absolute;
     border-bottom: none;
     background-color: transparent;
+    width: 100vw;
   }
 
   .nav-bar-toggle {
